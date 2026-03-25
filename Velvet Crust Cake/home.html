@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zeke's Cakeshop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Zeke's Cakeshop</div>
+        <div class="nav-buttons">
+            <a href="#orders" class="nav-btn">Orders</a>
+            <a href="#design" class="nav-btn">Design</a>
+            <a href="#pickup" class="nav-btn">Pickup</a>
+        </div>
+    </nav>
+
+    
+    <div class="login-card">
+        <h2>Welcome to Zeke's Cakeshop</h2>
+        <p>Login or Register to start your sweet journey!</p>
+        <form id="loginForm">
+            <input type="text" placeholder="Username" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit" class="btn">Login</button>
+            <button type="button" class="btn" id="registerBtn">Register</button>
+        </form>
+    </div>
+
+    <section id="orders" class="section-card">
+        <h2>Orders</h2>
+        <p>View and manage your cake orders here.</p>
+        <button class="section-btn" id="addOrderBtn">Add New Order</button>
+        <div id="orderList">
+            <div class="order-item">
+                <h3>Order #1</h3>
+                <p>Cake: Chocolate Fudge</p>
+                <p>Pickup Date: 2026-03-25</p>
+            </div>
+            <div class="order-item">
+                <h3>Order #2</h3>
+                <p>Cake: Strawberry Shortcake</p>
+                <p>Pickup Date: 2026-03-26</p>
+            </div>
+            <div class="order-item">
+                <h3>Order #3</h3>
+                <p>Cake: Red Velvet</p>
+                <p>Pickup Date: 2026-03-27</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="design" class="section-card">
+        <h2>Design</h2>
+        <p>Choose or customize cake designs.</p>
+        <div id="designGrid">
+            <div class="design-card">
+                <img src="choc.jpg" alt="Round Chocolate Cake">
+                <h3>Round Chocolate Cake</h3>
+                <button class="section-btn">Select</button>
+            </div>
+            <div class="design-card">
+                <img src="straw.jpg" alt="Heart-shaped Strawberry Cake">
+                <h3>Heart-shaped Strawberry Cake</h3>
+                <button class="section-btn">Select</button>
+            </div>
+            <div class="design-card">
+                <img src="red.jpg" alt="Red Velvet Cake">
+                <h3>Red Velvet Cake</h3>
+                <button class="section-btn">Select</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="pickup" class="section-card">
+        <h2>Pickup</h2>
+        <p>Schedule and view your pickups.</p>
+        <button class="section-btn" id="schedulePickupBtn" onclick="alert('Next available schedule: Mon-Fri 9AM-5PM')">Schedule Pickup</button>
+		
+        <div id="pickupList">
+            <div class="pickup-item">
+                <h3>Pickup #1</h3>
+                <p>Date: 2026-03-25</p>
+                <p>Order: Chocolate Fudge</p>
+            </div>
+            <div class="pickup-item">
+                <h3>Pickup #2</h3>
+                <p>Date: 2026-03-26</p>
+                <p>Order: Strawberry Shortcake</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const form = document.getElementById('loginForm');
+        form.addEventListener('submit', function(e){
+            e.preventDefault();
+            document.getElementById('orders').scrollIntoView({behavior: 'smooth'});
+        });
+
+        const registerBtn = document.getElementById('registerBtn');
+        registerBtn.addEventListener('click', function(){
+            document.getElementById('orders').scrollIntoView({behavior: 'smooth'});
+        });
+
+        const addOrderBtn = document.getElementById('addOrderBtn');
+        const orderList = document.getElementById('orderList');
+        addOrderBtn.addEventListener('click', function() {
+            const orderCount = orderList.children.length + 1;
+            const newOrder = document.createElement('div');
+            newOrder.className = 'order-item';
+            newOrder.innerHTML = `
+                <h3>Order #00${orderCount}</h3>
+                <p>Cake: New Cake</p>
+                <p>Pickup Date: TBD</p>
+            `;
+            orderList.appendChild(newOrder);
+        });
+    </script>
+</body>
+</html>
