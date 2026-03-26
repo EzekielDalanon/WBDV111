@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home | ESound</title>
+<link rel="stylesheet" href="home.css">
+</head>
+
+<body>
+
+<header class="navbar">
+<div class="logo">🎧 <span>ESound</span></div>
+<nav>
+<a href="#profile">Profile</a>
+<a href="#playlist">Playlist</a>
+<a href="#about">About Us</a>
+<a href="index.html" class="logout">Logout</a>
+</nav>
+</header>
+
+<section class="hero">
+<h1>Tune into life</h1>
+<p>Welcome back Ready to vibe?</p>
+<button class="play-btn">Start Listening</button>
+</section>
+
+<section id="profile" class="section">
+<h2>Your Profile</h2>
+<div class="profile-card">
+<div class="avatar">E</div>
+<div class="profile-info">
+<h3>Kiel</h3>
+<p>3 Playlists • 0 Followers</p>
+</div>
+</div>
+</section>
+
+<section id="playlist" class="section">
+<h2>Your Playlists</h2>
+
+<div class="playlist-container">
+
+<div class="playlist-card" onclick="playSong('irisSong')">
+<img src="iris.jpg">
+<h3>Iris</h3>
+<p>1 Song</p>
+<audio id="irisSong">
+<source src="iris.mp3" type="audio/mpeg">
+</audio>
+</div>
+
+<div class="playlist-card" onclick="playSong('kalaSong')">
+<img src="kala.jpg">
+<h3>Kalapastangan</h3>
+<p>1 Song</p>
+<audio id="kalaSong">
+<source src="kala.mp3" type="audio/mpeg">
+</audio>
+</div>
+
+<div class="playlist-card" onclick="playSong('kaniSong')">
+<img src="kani.jpg">
+<h3>Kanibalismo</h3>
+<p>1 Song</p>
+<audio id="kaniSong">
+<source src="kani.mp3" type="audio/mpeg">
+</audio>
+</div>
+
+</div>
+</section>
+
+<section id="about" class="section">
+<h2>About Us</h2>
+<p class="about-text">
+ESound is a music streaming platform to discover more music
+and relapsing
+</p>
+</section>
+
+
+<script>
+function playSong(songId){
+
+let songs=document.querySelectorAll("audio");
+songs.forEach(song=>{
+song.pause();
+song.currentTime=0;
+});
+
+let song=document.getElementById(songId);
+song.play();
+
+}
+</script>
+
+</body>
+</html>
