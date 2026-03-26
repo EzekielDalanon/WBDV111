@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SecurePay System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="login-container" id="login">
+    <div class="login-box">
+        <h2>SecurePay Login</h2>
+        <input type="text" placeholder="Employee Number">
+        <input type="password" placeholder="Password">
+        <button onclick="login()">Login</button>
+
+        <div class="bio">
+            <p>Or login with</p>
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/fingerprint.png">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/face-id.png">
+        </div>
+    </div>
+</div>
+
+<div class="home" id="home">
+
+    <div class="navbar">
+        <h2 class="logo">SecurePay</h2>
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="staff.html">Staff</a>
+            <a href="timesheet.html">Timesheets</a>
+            <a href="Payroll.html">Payslips</a>
+            <a href="tax.html">Tax View</a>
+        </div>
+    </div>
+
+    <div class="main">
+
+        <a href="staff.html" class="card">
+            <h3>Staff Management</h3>
+            <p>Manage employee records</p>
+        </a>
+
+        <a href="timesheet.html" class="card">
+            <h3>Timesheets</h3>
+            <p>Track attendance</p>
+        </a>
+
+        <a href="Payroll.html" class="card">
+            <h3>Payslips</h3>
+            <p>View salary</p>
+        </a>
+
+        <a href="tax.html" class="card">
+            <h3>Tax View</h3>
+            <p>Check tax details</p>
+        </a>
+
+    </div>
+
+    <div class="security-box">
+        <h3>Security</h3>
+        <div class="icons">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/fingerprint.png">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/face-id.png">
+        </div>
+    </div>
+
+</div>
+
+<script>
+function login() {
+    document.getElementById("login").style.display = "none";
+    document.getElementById("home").style.display = "block";
+}
+</script>
+
+</body>
+</html>

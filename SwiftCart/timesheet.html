@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Timesheets</title>
+<link rel="stylesheet" href="times.css">
+</head>
+<body>
+
+<div class="navbar">
+        <h2 class="logo">SecurePay</h2>
+        <div class="nav-links">
+            <a href="staff.html">Staff</a>
+            <a href="timesheet.html">Timesheets</a>
+            <a href="Payroll.html">Payslips</a>
+            <a href="tax.html">Tax View</a>
+        </div>
+    </div>
+
+<h1 class="title">Timesheets</h1>
+
+<div class="time-container">
+
+    <div class="time-card">
+        <h3>Naruto</h3>
+        <p>Time In: <span id="in1">--:--</span></p>
+        <p>Time Out: <span id="out1">--:--</span></p>
+        <button onclick="timeIn('in1')">Time In</button>
+        <button onclick="timeOut('out1')">Time Out</button>
+    </div>
+
+    <div class="time-card">
+        <h3>Kakashi</h3>
+        <p>Time In: <span id="in2">--:--</span></p>
+        <p>Time Out: <span id="out2">--:--</span></p>
+        <button onclick="timeIn('in2')">Time In</button>
+        <button onclick="timeOut('out2')">Time Out</button>
+    </div>
+
+</div>
+
+<script>
+function getTime() {
+    let now = new Date();
+    let h = now.getHours().toString().padStart(2, '0');
+    let m = now.getMinutes().toString().padStart(2, '0');
+    return h + ":" + m;
+}
+
+function timeIn(id) {
+    document.getElementById(id).innerText = getTime();
+}
+
+function timeOut(id) {
+    document.getElementById(id).innerText = getTime();
+}
+</script>
+
+</body>
+</html>
