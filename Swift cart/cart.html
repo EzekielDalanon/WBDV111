@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>QuickPantry Cart</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="navbar">
+  <h2>QuickPantry</h2>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="catalog.html">Catalog</a>
+    <a href="cart.html">Cart</a>
+    <a href="checkout.html">Checkout</a>
+  </div>
+</div>
+
+<div class="container cart-container">
+  <div class="cart-card">
+    <h3>Your Cart</h3>
+    <div id="cart-items"></div>
+    <div class="cart-total">
+      <h4 id="total">Total: ₱0</h4>
+      <a href="checkout.html" class="button-link">Proceed to Checkout</a>
+    </div>
+  </div>
+</div>
+
+<script>
+function displayCart() {
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+  const cartItemsDiv = document.getElementById('cart-items');
+  cartItemsDiv.innerHTML = '';
+  let total = 0;
+
+  cart.forEach(item => {
+    total += item.price * item.quantity;
+    const div = document.createElement('div');
+    div.className = 'cart-item';
+    div.innerHTML = `
+      <img src="${item.image}" alt="${item.name}">
+      <div class="cart-info">
+        <h4>${item.name}</h4>
+        <p>₱${item.price} x ${item.quantity}</p>
+      </div>
+    `;
+    cartItemsDiv.appendChild(div);
+  });
+
+  document.getElementById('total').innerText = `Total: ₱${total}`;
+}
+
+displayCart();
+</script>
+
+</body>
+</html>

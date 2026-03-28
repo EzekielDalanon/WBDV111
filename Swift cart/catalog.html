@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>QuickPantry Catalog</title>
+<link rel="stylesheet" href="istilo.css">
+</head>
+<body class="catalog">
+
+<div class="navbar">
+  <h2>QuickPantry</h2>
+  <div class="nav-links">
+    <a href="home.html">Home</a>
+    <a href="catalog.html">Catalog</a>
+    <a href="cart.html">Cart</a>
+    <a href="checkout.html">Checkout</a>
+  </div>
+</div>
+
+<div class="catalog-container">
+  <div class="product-card" data-name="Fresh Apples" data-price="50" data-image="apple.jpg">
+    <img src="apple.jpg" alt="Apple">
+    <h4>Fresh Apples</h4>
+    <p>₱50 / kg</p>
+    <button class="add-cart">Add to Cart</button>
+  </div>
+
+  <div class="product-card" data-name="Whole Wheat Bread" data-price="35" data-image="bread.jpg">
+    <img src="bread.jpg" alt="Bread">
+    <h4>Whole Wheat Bread</h4>
+    <p>₱35 / loaf</p>
+    <button class="add-cart">Add to Cart</button>
+  </div>
+
+  <div class="product-card" data-name="Fresh Milk" data-price="60" data-image="fresh.jpg">
+    <img src="fresh.jpg" alt="Milk">
+    <h4>Fresh Milk</h4>
+    <p>₱60 / liter</p>
+    <button class="add-cart">Add to Cart</button>
+  </div>
+</div>
+
+<script>
+// Add to Cart functionality
+const buttons = document.querySelectorAll('.add-cart');
+
+buttons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const card = btn.parentElement;
+    const product = {
+      name: card.getAttribute('data-name'),
+      price: parseFloat(card.getAttribute('data-price')),
+      image: card.getAttribute('data-image'),
+      quantity: 1
+    };
+
+    // Get current cart or empty
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    // Check if item exists, increment quantity
+    const existing = cart.find(item => item.name === product.name);
+    if (existing) {
+      existing.quantity += 1;
+    } else {
+      cart.push(product);
+    }
+
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+    // Redirect to cart page
+    window.location.href = "cart.html";
+  });
+});
+</script>
+
+</body>
+</html>

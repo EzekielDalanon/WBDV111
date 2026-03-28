@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>QuickPantry Home</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body style="background-image: url('cart.png');">
+
+<div class="navbar">
+  <h2>QuickPantry</h2>
+  <div class="nav-links">
+    <a href="home.html">Home</a>
+    <a href="catalog.html">Catalog</a>
+    <a href="cart.html">Cart</a>
+    <a href="checkout.html">Checkout</a>
+  </div>
+</div>
+
+<div class="container">
+  <div class="card">
+    <h3>Welcome to QuickPantry</h3>
+    <p>Do you have a membership card?</p>
+
+    <div class="buttons">
+      <button onclick="showMember()">Yes, I'm a Member</button>
+      <button onclick="showGuest()">No, Continue as Guest</button>
+    </div>
+
+    <div id="memberForm" class="form hidden">
+      <input type="text" placeholder="Enter Membership Number">
+      <a href="catalog.html" class="button-link">Proceed</a>
+    </div>
+
+    <div id="guestForm" class="form hidden">
+      <input type="email" placeholder="Enter Email">
+      <a href="catalog.html" class="button-link">Proceed</a>
+    </div>
+  </div>
+</div>
+
+<script>
+function showMember() {
+  document.getElementById("memberForm").classList.remove("hidden");
+  document.getElementById("guestForm").classList.add("hidden");
+}
+
+function showGuest() {
+  document.getElementById("guestForm").classList.remove("hidden");
+  document.getElementById("memberForm").classList.add("hidden");
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>QuickPantry Checkout</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="navbar">
+  <h2>QuickPantry</h2>
+  <div class="nav-links">
+    <a href="home.html">Home</a>
+    <a href="catalog.html">Catalog</a>
+    <a href="cart.html">Cart</a>
+    <a href="checkout.html">Checkout</a>
+  </div>
+</div>
+
+<div class="container checkout-container">
+  <div class="checkout-card">
+    <h3>Checkout</h3>
+    <form id="checkoutForm">
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email" required>
+      <input type="text" placeholder="Address" required>
+      <input type="text" placeholder="City" required>
+      <input type="text" placeholder="Postal Code" required>
+      <select required>
+        <option value="">Select Payment Method</option>
+        <option value="cod">Cash on Delivery</option>
+        <option value="gcash">Gcash</option>
+        <option value="bank">Bank Transfer</option>
+      </select>
+      <button type="submit">Place Order</button>
+    </form>
+  </div>
+</div>
+
+<script>
+const form = document.getElementById('checkoutForm');
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  alert('Thank you! Your order has been placed.');
+  localStorage.removeItem('cart');
+  window.location.href = "index.html";
+});
+</script>
+
+</body>
+</html>
