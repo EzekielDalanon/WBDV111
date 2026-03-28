@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neon Grid Events | Tickets</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="tickets">
+  <header class="site-header">
+    <div class="container navbar">
+      <a class="brand" href="index.html">Neon Grid Events</a>
+      <nav class="nav-links">
+        <a href="index.html" data-nav="home">Home</a>
+        <a href="events.html" data-nav="events">Events</a>
+        <a href="tickets.html" data-nav="tickets">Tickets</a>
+        <a href="venue.html" data-nav="venue">Venue</a>
+        <a href="contact.html" data-nav="contact">Contact</a>
+        <a href="admin-login.html" data-nav="admin">Admin</a>
+      </nav>
+      <button class="btn btn--ghost" type="button" data-party-toggle>Party Mode: OFF</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 class="section-title">Tokens & Access</h1>
+
+    <section class="grid">
+      <article class="card">
+        <span class="badge">Starter</span>
+        <h3>Arcade Pass</h3>
+        <p>General entry, main arcade floor access, and token booth lane.</p>
+        <strong>$45</strong>
+        <a class="btn btn--ghost" href="contact.html">Ask for Co-op Rates</a>
+      </article>
+      <article class="card">
+        <span class="badge">Most Popular</span>
+        <h3>Power-Up Pass</h3>
+        <p>Priority entry, neon lounge access, and 10 free arcade tokens.</p>
+        <strong>$85</strong>
+        <a class="btn btn--ghost" href="contact.html">Ask for Co-op Rates</a>
+      </article>
+      <article class="card">
+        <span class="badge">VIP</span>
+        <h3>God Mode Pass</h3>
+        <p>VIP balcony seating, backstage DJ tour, and exclusive retro merch pack.</p>
+        <strong>$140</strong>
+        <a class="btn btn--ghost" href="contact.html">Ask for Co-op Rates</a>
+      </article>
+    </section>
+
+    <section style="margin-top: 2.5rem;">
+      <div class="panel">
+        <h2 class="section-title" style="margin-top:0;">Quick Pass Builder</h2>
+        <div class="ticket-row" data-ticket-row data-price="45">
+          <div>
+            <strong>Arcade Pass</strong>
+            <p>Entry + main floor</p>
+          </div>
+          <div class="qty-control">
+            <button type="button" data-qty-minus>-</button>
+            <input type="text" value="0" data-qty>
+            <button type="button" data-qty-plus>+</button>
+          </div>
+          <div>$45 each</div>
+        </div>
+        <div class="ticket-row" data-ticket-row data-price="85">
+          <div>
+            <strong>Power-Up Pass</strong>
+            <p>Priority entry + lounge</p>
+          </div>
+          <div class="qty-control">
+            <button type="button" data-qty-minus>-</button>
+            <input type="text" value="0" data-qty>
+            <button type="button" data-qty-plus>+</button>
+          </div>
+          <div>$85 each</div>
+        </div>
+        <div class="ticket-row" data-ticket-row data-price="140">
+          <div>
+            <strong>God Mode Pass</strong>
+            <p>Balcony + backstage</p>
+          </div>
+          <div class="qty-control">
+            <button type="button" data-qty-minus>-</button>
+            <input type="text" value="0" data-qty>
+            <button type="button" data-qty-plus>+</button>
+          </div>
+          <div>$140 each</div>
+        </div>
+        <div class="total-box" style="margin-top: 1.2rem;">
+          Total: <span data-total>$0</span>
+        </div>
+      </div>
+    </section>
+
+    <section style="margin-top: 2.5rem;">
+      <h2 class="section-title">FAQ</h2>
+      <div class="accordion" data-accordion>
+        <div class="accordion-item open">
+          <button type="button">What is included with a pass?</button>
+          <div class="content">
+            Every pass includes entry, main arcade floor access, and the retro pop-up experience. Power-Up and God Mode add VIP lounge perks.
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button type="button">Can I transfer my pass to another player?</button>
+          <div class="content">
+            Yes. Passes can be transferred up to 6 hours before player one starts (doors open). Contact our support crew to update the name.
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button type="button">Do you offer co-op or party discounts?</button>
+          <div class="content">
+            Parties of 8 or more get custom co-op bundles. Hit us up on the contact page to unlock the deal and get your party ready.
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p class="pill">Neon Grid Events · Token Booth</p>
+      <p>© <span data-year></span> Neon Grid Events. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
