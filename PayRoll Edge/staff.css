@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #0a1f3c;
+    color: white;
+}
+
+.navbar {
+    background: #08172b;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.title {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.staff-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.staff-card {
+    background: #112b4a;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    width: 200px;
+    transition: 0.3s;
+}
+
+.staff-card img {
+    border-radius: 50%;
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+.staff-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(77,166,255,0.5);
+}
