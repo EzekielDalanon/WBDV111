@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Appointment | HealthSync</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <div class="logo">HealthSync</div>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="staff.html">Staff</a>
+        <a href="history.html">History</a>
+    </div>
+</nav>
+
+<div class="wizard-container">
+    <form id="bookingForm">
+        <div class="step active" id="step1">
+            <h2>Select Specialty</h2>
+            <select id="specialty">
+                <option>Cardiology</option>
+                <option>Pediatrics</option>
+                <option>Dermatology</option>
+            </select>
+            <button type="button" class="primary-btn" onclick="nextStep(2)">Next</button>
+        </div>
+
+        <div class="step" id="step2">
+            <h2>Pick Doctor</h2>
+            <select id="doctor">
+                <option>Dr. Smith (Available)</option>
+                <option>Dr. Garcia (Available)</option>
+            </select>
+            <button type="button" class="primary-btn" onclick="nextStep(3)">Next</button>
+            <button type="button" class="primary-btn prev-btn" onclick="nextStep(1)">Back</button>
+        </div>
+
+        <div class="step" id="step3">
+            <h2>Choose Time</h2>
+            <input type="datetime-local">
+            <button type="submit" class="primary-btn">Confirm Appointment</button>
+            <button type="button" class="primary-btn prev-btn" onclick="nextStep(2)">Back</button>
+        </div>
+    </form>
+</div>
+
+<script>
+    function nextStep(n) {
+        document.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
+        document.getElementById('step' + n).classList.add('active');
+    }
+</script>
+</body>
+</html>

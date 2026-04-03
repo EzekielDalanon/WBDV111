@@ -1,0 +1,138 @@
+:root {
+    --trust-blue: #0056b3;
+    --dark-blue: #004494;
+    --soft-gray: #f8f9fa;
+    --white: #ffffff;
+    --success-green: #28a745;
+    --text-dark: #333;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: var(--white);
+    color: var(--text-dark);
+}
+
+nav {
+    background: var(--trust-blue);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+nav .nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav .nav-links a:hover {
+    opacity: 0.8;
+}
+
+nav .admin-btn {
+    border: 1px solid white;
+    padding: 5px 12px;
+    border-radius: 4px;
+}
+
+.container {
+    padding: 50px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    color: var(--trust-blue);
+    font-size: 2.5rem;
+}
+
+.reg-btn {
+    background: var(--trust-blue);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.badge {
+    background: var(--white);
+    color: var(--success-green);
+    font-size: 0.7rem;
+    padding: 2px 8px;
+    border-radius: 50px;
+    margin-left: 10px;
+    border: 1px solid var(--success-green);
+}
+
+.wizard-container {
+    max-width: 500px;
+    margin: 50px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.step { display: none; }
+.step.active { display: block; }
+
+select, input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.primary-btn {
+    background: var(--trust-blue);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1rem;
+}
+
+.prev-btn {
+    background: #6c757d;
+    margin-top: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+}
+
+th {
+    background: var(--trust-blue);
+    color: white;
+}

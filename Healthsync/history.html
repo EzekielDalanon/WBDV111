@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Appointment History | HealthSync</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <div class="logo">HealthSync</div>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="book.html">Book Appointment</a>
+        <a href="staff.html">Staff</a>
+        <a href="history.html">History</a>
+        <a href="admin-login.html" class="admin-btn">Admin Login</a>
+    </div>
+</nav>
+
+<div class="container">
+    <h2 style="color: var(--trust-blue);">Your Appointment History</h2>
+    <p>Track your upcoming and past medical visits.</p>
+
+    <div style="background: #e9ecef; padding: 20px; border-radius: 8px; border-left: 5px solid var(--trust-blue);">
+        <strong>Note:</strong> New appointments might take a few minutes to be "Verified" by the admin.
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Date & Time</th>
+                <th>Doctor</th>
+                <th>Specialty</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Oct 24, 2023 - 10:30 AM</td>
+                <td>Dr. Alexander Smith</td>
+                <td>Cardiology</td>
+                <td><span style="color: var(--success-green); font-weight: bold;">Confirmed</span></td>
+            </tr>
+            <tr>
+                <td>Nov 02, 2023 - 02:00 PM</td>
+                <td>Dr. Maria Garcia</td>
+                <td>Pediatrics</td>
+                <td><span style="color: #f39c12; font-weight: bold;">Pending</span></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
