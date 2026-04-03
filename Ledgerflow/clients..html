@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LedgerFlow | Register Client</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="sidebar">
+        <div class="logo">LedgerFlow</div>
+        <ul class="nav-links">
+            <li><a href="index.html"><i class="fa-solid fa-table-columns"></i> Dashboard</a></li>
+            <li><a href="invoices.html"><i class="fa-solid fa-file-invoice-dollar"></i> Invoices</a></li>
+            <li class="active"><a href="clients.html"><i class="fa-solid fa-users"></i> Clients</a></li>
+            <li><a href="settings.html"><i class="fa-solid fa-gear"></i> Settings</a></li>
+        </ul>
+        <div class="security-status">
+            <i class="fa-solid fa-shield-check"></i>
+            <span>2FA ACTIVE</span>
+        </div>
+    </nav>
+    <main class="content">
+        <header class="top-header">
+            <div class="breadcrumb">Clients / Register New</div>
+        </header>
+        <section class="form-container">
+            <h1>Register New Client</h1>
+            <p class="subtitle">Enter the client's information for secure billing.</p>
+            <form action="clients.html" class="secure-form">
+                <div class="form-group">
+                    <label>Company Name</label>
+                    <input type="text" placeholder="e.g. Acme Corp" required>
+                </div>
+                <div class="form-group">
+                    <label>Billing Email</label>
+                    <input type="email" placeholder="client@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Client Industry</label>
+                    <select required>
+                        <option value="">Select industry...</option>
+                        <option value="tech">Technology</option>
+                        <option value="fin">Finance</option>
+                        <option value="creative">Creative/Media</option>
+                    </select>
+                </div>
+                <div class="form-actions">
+                    <a href="clients.html" class="btn-outline" style="text-decoration: none;">Cancel</a>
+                    <button type="submit" class="btn-primary">Save Client</button>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
