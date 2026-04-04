@@ -1,0 +1,303 @@
+:root {
+    --paper-bg: #FDFBF7;
+    --card-bg: #F3E5AB;
+    --ink-blue: #003366;
+    --stamp-red: #B22222;
+    --font-vintage: 'Playfair Display', Georgia, serif;
+    --font-modern: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-modern);
+    background-color: var(--paper-bg);
+    color: var(--ink-blue);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    border-bottom: 2px solid var(--ink-blue);
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-family: var(--font-vintage);
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--ink-blue);
+    text-decoration: none;
+}
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: var(--ink-blue);
+    font-weight: 500;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.overdue-badge {
+    background-color: var(--stamp-red);
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-left: 15px;
+}
+
+.search-container {
+    text-align: center;
+    padding: 100px 20px 60px;
+}
+
+.search-container h1 {
+    font-family: var(--font-vintage);
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px 25px;
+    font-size: 18px;
+    border: 2px solid var(--ink-blue);
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 5px 5px 0px var(--card-bg);
+    outline: none;
+}
+
+.search-bar:focus {
+    box-shadow: 5px 5px 0px var(--ink-blue);
+}
+
+.action-cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+}
+
+.card-btn {
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    background-color: var(--card-bg);
+    border: 2px solid var(--ink-blue);
+    padding: 30px 30px 30px 55px;
+    width: 220px;
+    transition: all 0.3s ease;
+    box-shadow: 4px 4px 15px rgba(0,0,0,0.05);
+}
+
+.card-btn::before {
+    content: '';
+    position: absolute;
+    left: -12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    background-color: var(--paper-bg);
+    border: 2px solid var(--ink-blue);
+    border-radius: 50%;
+}
+
+.card-btn:hover {
+    transform: translateY(-8px);
+    box-shadow: 10px 10px 0px rgba(0, 51, 102, 0.1);
+    background-color: #f7eda8;
+}
+
+.card-btn h3 {
+    margin: 0 0 10px 0;
+    font-family: var(--font-vintage);
+    font-size: 22px;
+}
+
+.results-page {
+    padding: 60px 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.results-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px double var(--ink-blue);
+    padding-bottom: 25px;
+    margin-bottom: 40px;
+}
+
+.back-link {
+    text-decoration: none;
+    color: var(--ink-blue);
+    font-weight: bold;
+}
+
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 30px;
+}
+
+.book-card {
+    background: #fff;
+    border: 2px solid var(--ink-blue);
+    display: flex;
+    padding: 20px;
+    gap: 25px;
+    box-shadow: 5px 5px 0px var(--card-bg);
+}
+
+.vintage-cover {
+    width: 140px;
+    height: 200px;
+    background: #4a1c1c;
+    color: var(--card-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: var(--font-vintage);
+    border: 4px double var(--card-bg);
+    padding: 10px;
+    font-weight: bold;
+}
+
+.book-info h3 {
+    margin: 0 0 5px 0;
+    font-family: var(--font-vintage);
+    font-size: 24px;
+}
+
+.status-available {
+    display: inline-block;
+    color: #2e7d32;
+    font-weight: bold;
+    font-size: 12px;
+    border: 1px solid #2e7d32;
+    padding: 2px 8px;
+    margin: 15px 0;
+    text-transform: uppercase;
+}
+
+.loan-btn {
+    background: var(--ink-blue);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+}
+
+.container {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.page-header {
+    border-bottom: 2px solid var(--ink-blue);
+    margin-bottom: 40px;
+    padding-bottom: 15px;
+}
+
+.page-header h1 {
+    font-family: var(--font-vintage);
+    margin: 0;
+}
+
+.vintage-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border: 2px solid var(--ink-blue);
+}
+
+.vintage-table th {
+    background: var(--ink-blue);
+    color: white;
+    padding: 18px;
+    text-align: left;
+    font-family: var(--font-vintage);
+}
+
+.vintage-table td {
+    padding: 18px;
+    border-bottom: 1px solid #eee;
+}
+
+.loan-item-card {
+    background: var(--card-bg);
+    border: 2px solid var(--ink-blue);
+    display: flex;
+    align-items: center;
+    padding: 25px;
+    gap: 40px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.stamp-box {
+    border: 4px solid var(--stamp-red);
+    color: var(--stamp-red);
+    padding: 8px 15px;
+    font-weight: 900;
+    font-family: var(--font-vintage);
+    transform: rotate(-12deg);
+    font-size: 20px;
+}
+
+.loan-details h3 {
+    margin: 0;
+    font-family: var(--font-vintage);
+}
+
+.due-date {
+    color: var(--stamp-red);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.overdue-section {
+    max-width: 900px;
+    margin: 100px auto;
+    padding: 40px;
+    border: 2px dashed var(--stamp-red);
+    background-color: #fff;
+    position: relative;
+}
+
+.stamp {
+    position: absolute;
+    top: -20px;
+    right: 20px;
+    color: var(--stamp-red);
+    font-family: var(--font-vintage);
+    font-size: 24px;
+    font-weight: bold;
+    border: 3px solid var(--stamp-red);
+    padding: 5px 15px;
+    transform: rotate(12deg);
+    background: #fff;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AKLATAN | Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="home.html" class="logo">AKLATAN</a>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="members.html">Members</a>
+            <a href="loans.html">Loans</a>
+            <span class="overdue-badge">1 Overdue</span>
+        </nav>
+    </header>
+
+    <main>
+        <section class="search-container">
+            <h1>Find Your Next Archive</h1>
+            <form action="results.html" method="GET">
+                <input type="text" name="q" class="search-bar" placeholder="Search book (e.g. Laws of Power)..." required>
+                <br><br>
+                <button type="submit" class="loan-btn" style="max-width: 200px; margin: 0 auto;">Search Archive</button>
+            </form>
+        </section>
+
+        <section class="action-cards">
+            <a href="home.html" class="card-btn">
+                <h3>Search Book &rarr;</h3>
+                <p>Browse the digital and physical catalog.</p>
+            </a>
+            <a href="members.html" class="card-btn">
+                <h3>Members</h3>
+                <p>View the registry of library patrons.</p>
+            </a>
+            <a href="loans.html" class="card-btn">
+                <h3>My Loans</h3>
+                <p>Check your borrowed items and status.</p>
+            </a>
+            <a href="loans.html" class="card-btn">
+                <h3>Track Due Date</h3>
+                <p>Monitor your timeline and avoid fees.</p>
+            </a>
+        </section>
+    </main>
+</body>
+</html>
