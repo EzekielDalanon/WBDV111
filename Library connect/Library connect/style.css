@@ -1,0 +1,158 @@
+:root {
+    --paper-bg: #FDFBF7;
+    --card-bg: #F3E5AB;
+    --ink-blue: #003366;
+    --stamp-red: #B22222;
+    --font-vintage: 'Playfair Display', Georgia, serif;
+    --font-modern: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-modern);
+    background-color: var(--paper-bg);
+    color: var(--ink-blue);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    border-bottom: 2px solid var(--ink-blue);
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-family: var(--font-vintage);
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--ink-blue);
+    text-decoration: none;
+}
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: var(--ink-blue);
+    font-weight: 500;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.overdue-badge {
+    background-color: var(--stamp-red);
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-left: 15px;
+}
+
+.search-container {
+    text-align: center;
+    padding: 100px 20px 60px;
+}
+
+.search-container h1 {
+    font-family: var(--font-vintage);
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px 25px;
+    font-size: 18px;
+    border: 2px solid var(--ink-blue);
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 5px 5px 0px var(--card-bg);
+    outline: none;
+}
+
+.search-bar:focus {
+    box-shadow: 5px 5px 0px var(--ink-blue);
+}
+
+.action-cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+}
+
+.card-btn {
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    background-color: var(--card-bg);
+    border: 2px solid var(--ink-blue);
+    padding: 30px 30px 30px 55px;
+    width: 220px;
+    transition: all 0.3s ease;
+    box-shadow: 4px 4px 15px rgba(0,0,0,0.05);
+}
+
+.card-btn::before {
+    content: '';
+    position: absolute;
+    left: -12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    background-color: var(--paper-bg);
+    border: 2px solid var(--ink-blue);
+    border-radius: 50%;
+}
+
+.card-btn:hover {
+    transform: translateY(-8px);
+    box-shadow: 10px 10px 0px rgba(0, 51, 102, 0.1);
+    background-color: #f7eda8;
+}
+
+.card-btn h3 {
+    margin: 0 0 10px 0;
+    font-family: var(--font-vintage);
+    font-size: 22px;
+}
+
+.results-page {
+    padding: 60px 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.results-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px double var(--ink-blue);
+    padding-bottom: 25px;
+    margin-bottom: 40px;
+}
+
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 30px;
+}
+
+.book-card {
+    background: #fff;
+    border:
