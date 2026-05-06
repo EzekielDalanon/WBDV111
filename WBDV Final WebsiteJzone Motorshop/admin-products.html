@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jzone Motoshop - Product Management</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav>
+    <a href="admin-dashboard.html" class="logo">Jzone Motoshop <span class="admin-badge">Admin</span></a>
+    <ul class="nav-links">
+        <li><a href="admin-dashboard.html">Dashboard</a></li>
+        <li><a href="admin-reports.html">Reports</a></li>
+        <li><a href="admin-products.html" class="active">Product Management</a></li>
+        <li><a href="admin-orders.html">Orders</a></li>
+        <li><a href="index.html">Logout</a></li>
+    </ul>
+</nav>
+
+<div class="admin-banner">
+    <h1>Product Management</h1>
+    <p>Add, edit, or remove items from your catalog</p>
+</div>
+
+<div class="section">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+        <h2 class="section-title" style="margin-bottom: 0;">Product & Services List</h2>
+        <a href="admin-add-product.html" class="btn" style="padding: 10px 20px; font-size: 14px;">+ Add New Item</a>
+    </div>
+
+    <div class="table-wrap">
+        <table class="admin-table">
+            <thead>
+                <tr>
+                    <th>Item ID</th>
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th>Price</th>
+                    <th>Stock</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>#P001</td>
+                    <td>Engine Oil (1L)</td>
+                    <td>Parts</td>
+                    <td>₱450</td>
+                    <td>45</td>
+                    <td>
+                        <a href="admin-edit-product.html" style="color: #004085; text-decoration: none; font-weight: bold; margin-right: 15px;">Edit</a>
+                        <a href="admin-delete-confirm.html" style="color: #D32F2F; text-decoration: none; font-weight: bold;">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>#P002</td>
+                    <td>Brake Pads</td>
+                    <td>Parts</td>
+                    <td>₱380</td>
+                    <td>22</td>
+                    <td>
+                        <a href="admin-edit-product.html" style="color: #004085; text-decoration: none; font-weight: bold; margin-right: 15px;">Edit</a>
+                        <a href="admin-delete-confirm.html" style="color: #D32F2F; text-decoration: none; font-weight: bold;">Delete</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2026 Jzone Motoshop. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
