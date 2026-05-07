@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jzone Motoshop - Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav>
+    <a href="index.html" class="logo">Jzone motoshop</a>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="products.html">Product/Service</a></li>
+        <li><a href="login.html" class="active">Login/Sign Up</a></li>
+        <li><a href="order.html">Order</a></li>
+    </ul>
+</nav>
+
+<div class="about-banner">
+    <h1>Login</h1>
+    <p>Access your Jzone Motoshop account</p>
+</div>
+
+<div class="login-box">
+    <h2>Login to Your Account</h2>
+    
+    <form id="loginForm">
+        <input type="email" id="email" placeholder="Email Address" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <p id="loginError" style="display:none; color:#D32F2F; font-size:13px; margin-bottom:14px; text-align:center;">Invalid email or password.</p>
+        <button type="submit" class="btn" style="width: 100%; margin-bottom: 15px;">Login</button>
+    </form>
+
+    <div class="signup-link">
+        <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+        <p style="margin-top:6px;"><a href="#">Forgot Password?</a></p>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2025 Jzone Motoshop. All rights reserved. | Premium Moto Parts & Professional Service Since 2023</p>
+</footer>
+
+<script>
+    const loginForm = document.getElementById('loginForm');
+    const loginError = document.getElementById('loginError');
+
+    const accounts = {
+        'admin@gmail.com': {
+            password: '12345',
+            redirect: 'admin-dashboard.html'
+        },
+        'superadmin@gmail.com': {
+            password: '12345',
+            redirect: 'super-dashboard.html'
+        }
+    };
+
+    loginForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const email = document.getElementById('email').value.trim().toLowerCase();
+        const password = document.getElementById('password').value;
+        const account = accounts[email];
+
+        if (account && account.password === password) {
+            window.location.href = account.redirect;
+            return;
+        }
+
+        loginError.style.display = 'block';
+    });
+</script>
+
+</body>
+</html>

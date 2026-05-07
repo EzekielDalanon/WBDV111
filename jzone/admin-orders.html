@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jzone Motoshop - Manage Orders</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav>
+    <a href="admin-dashboard.html" class="logo">Jzone Motoshop <span class="admin-badge">Admin</span></a>
+    <ul class="nav-links">
+        <li><a href="admin-dashboard.html">Dashboard</a>[cite: 2]</li>
+        <li><a href="admin-reports.html">Reports</a>[cite: 2]</li>
+        <li><a href="admin-products.html">Product Management</a></li>
+        <li><a href="admin-orders.html" class="active">Orders</a></li>
+        <li><a href="index.html">Logout</a>[cite: 2]</li>
+    </ul>
+</nav>
+
+<div class="admin-banner">
+    <h1>Order Management</h1>
+    <p>Process, update, and track customer orders</p>
+</div>
+
+<div class="section">
+    <h2 class="section-title" style="text-align: left;">Recent Transactions</h2>
+    <div class="table-wrap">
+        <table class="admin-table">
+            <thead>
+                <tr>
+                    <th>Order ID</th>
+                    <th>Customer</th>
+                    <th>Items</th>
+                    <th>Total</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>#0041</td>
+                    <td>Juan dela Cruz</td>
+                    <td>Engine Oil, Brake Pads</td>
+                    <td>₱830</td>
+                    <td><span class="status pending">Pending</span>[cite: 2]</td>
+                </tr>
+                <tr>
+                    <td>#0040</td>
+                    <td>Maria Santos</td>
+                    <td>Tune-Up Service</td>
+                    <td>₱700</td>
+                    <td><span class="status done">Completed</span>[cite: 2]</td>
+                </tr>
+                <tr>
+                    <td>#0039</td>
+                    <td>Rey Reyes</td>
+                    <td>Chain Set, Air Filter</td>
+                    <td>₱1,140</td>
+                    <td><span class="status process">Processing</span>[cite: 2]</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2026 Jzone Motoshop. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
