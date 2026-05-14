@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jzone Motoshop - Super Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav>
+    <a href="super-dashboard.html" class="logo">Jzone Motoshop <span class="super-badge">Super Admin</span></a>
+    <ul class="nav-links">
+        <li><a href="super-dashboard.html" class="active">Dashboard</a></li>
+        <li><a href="admin-reports.html">Reports</a></li>
+        <li><a href="#">Admin Management</a></li>
+        <li><a href="#">User Management</a></li>
+        <li><a href="#">Site Settings</a></li>
+        <li><a href="index.html">Logout</a></li>
+    </ul>
+</nav>
+
+<div class="admin-banner" style="background-color: #212121;">
+    <h1>Super Admin Dashboard</h1>
+    <p>System Overview & Global Controls</p>
+</div>
+
+<div class="section">
+    <div class="stat-cards">
+        <div class="stat-card">
+            <div class="stat-number">3</div>
+            <div class="stat-label">Active Admins</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">System OK</div>
+            <div class="stat-label">Server Status</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">₱84,500</div>
+            <div class="stat-label">Total Platform Revenue</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">312</div>
+            <div class="stat-label">Total Registered Users</div>
+        </div>
+    </div>
+
+    <h2 class="section-title" style="margin-top: 50px;">Admin Activity Log</h2>
+    <div class="table-wrap">
+        <table class="admin-table">
+            <thead>
+                <tr>
+                    <th>Log ID</th>
+                    <th>Admin Name</th>
+                    <th>Action Performed</th>
+                    <th>Date / Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>#L099</td>
+                    <td>Admin_John</td>
+                    <td>Updated price for "Engine Oil (1L)"</td>
+                    <td>Today, 10:45 AM</td>
+                </tr>
+                <tr>
+                    <td>#L098</td>
+                    <td>Admin_Sarah</td>
+                    <td>Marked Order #0040 as Completed</td>
+                    <td>Today, 09:12 AM</td>
+                </tr>
+                <tr>
+                    <td>#L097</td>
+                    <td>Admin_John</td>
+                    <td>Added new product "Chain Cleaner"</td>
+                    <td>Yesterday, 04:30 PM</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2025 Jzone Motoshop. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

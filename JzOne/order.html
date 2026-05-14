@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jzone Motoshop - Order</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@700;900&display=swap" rel="stylesheet">
+</head>
+<body data-protected-user-page>
+
+<nav>
+    <a href="user-account.html" class="logo">Jzone Motoshop <span class="user-badge">User</span></a>
+    <ul class="nav-links">
+        <li><a href="user-account.html">Account</a></li>
+        <li><a href="user-products.html">Products</a></li>
+        <li><a href="user-services.html">Services</a></li>
+        <li><a href="user-cart.html">Cart</a></li>
+        <li><a href="order.html" class="active">Order</a></li>
+        <li><a href="index.html" data-logout>Logout</a></li>
+    </ul>
+</nav>
+
+<div class="about-banner">
+    <h1>Place Your Order</h1>
+    <p>Review your selected items and complete your purchase</p>
+</div>
+
+<div class="section">
+    <div class="order-grid">
+        <div class="order-products">
+            <h2 class="section-title" style="text-align:left;">Selected Items <span class="badge" data-order-count>0 items</span></h2>
+            <div data-order-list></div>
+
+            <hr class="divider">
+
+            <h3 style="margin-bottom: 16px; color: #0d1b2a;">Delivery Details</h3>
+
+            <div class="contact-form">
+                <form data-order-form>
+                    <input type="text" placeholder="Full Name" required>
+                    <input type="text" placeholder="Phone Number" required>
+                    <input type="text" placeholder="Delivery Address" required>
+                    <input type="text" placeholder="City / Municipality" required>
+                    <textarea placeholder="Additional notes or instructions..."></textarea>
+                    <button type="submit" class="btn" style="width: 100%;">Place Order</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="order-summary">
+            <h3>Order Summary</h3>
+            <div data-order-summary></div>
+            <br>
+            <p style="font-size:12px; color:#888;">First-time customers get 10% off! Mention this when you call to confirm your order.</p>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2025 Jzone Motoshop. All rights reserved. | Premium Moto Parts & Professional Service Since 2023</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
