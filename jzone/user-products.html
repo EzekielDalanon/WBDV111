@@ -3,39 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jzone Motoshop - Products & Services</title>
+    <title>Jzone Motoshop - User Products</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@700;900&display=swap" rel="stylesheet">
 </head>
-<body>
+<body data-protected-user-page>
 
 <nav>
-    <a href="index.html" class="logo">Jzone motoshop</a>
+    <a href="user-account.html" class="logo">Jzone Motoshop <span class="user-badge">User</span></a>
     <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="contact.html">About Us</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="products.html" class="active">Product/Service</a></li>
-        <li><a href="login.html">Login/Sign Up</a></li>
-        <li><a href="login.html" class="nav-order-btn" data-public-order-login>Order</a></li>
+        <li><a href="user-account.html">Account</a></li>
+        <li><a href="user-products.html" class="active">Products</a></li>
+        <li><a href="user-services.html">Services</a></li>
+        <li><a href="user-cart.html">Cart</a></li>
+        <li><a href="index.html" data-logout>Logout</a></li>
     </ul>
 </nav>
 
-<div class="about-banner">
-    <h1>Products & Services</h1>
-    <p>Everything your motorcycle needs, all in one place</p>
+<div class="admin-banner">
+    <h1>Products</h1>
+    <p>All motorcycle parts and accessories available for your cart.</p>
 </div>
 
 <div class="section">
     <h2 class="section-title">Motorcycle Parts & Accessories</h2>
     <div class="cards">
-
         <div class="card">
             <img src="Engine.jpg" alt="Engine Oil" class="card-img">
             <div class="card-content">
                 <h3>Engine Oil</h3>
                 <p>High-performance synthetic engine oil for all motorcycle models. 1L bottle.</p>
-                <div class="price">₱450</div>
+                <div class="price">PHP 450</div>
                 <a href="#" class="btn" data-add-cart data-id="engine-oil" data-name="Engine Oil" data-price="450" data-category="Product" data-description="High-performance synthetic engine oil for all motorcycle models.">Add to Cart</a>
             </div>
         </div>
@@ -45,7 +43,7 @@
             <div class="card-content">
                 <h3>Brake Pads</h3>
                 <p>Genuine replacement brake pads, front and rear. Compatible with most models.</p>
-                <div class="price">₱380</div>
+                <div class="price">PHP 380</div>
                 <a href="#" class="btn" data-add-cart data-id="brake-pads" data-name="Brake Pads" data-price="380" data-category="Product" data-description="Genuine replacement brake pads, front and rear.">Add to Cart</a>
             </div>
         </div>
@@ -55,7 +53,7 @@
             <div class="card-content">
                 <h3>Air Filter</h3>
                 <p>Premium aftermarket air filter for improved engine airflow and performance.</p>
-                <div class="price">₱290</div>
+                <div class="price">PHP 290</div>
                 <a href="#" class="btn" data-add-cart data-id="air-filter" data-name="Air Filter" data-price="290" data-category="Product" data-description="Premium aftermarket air filter for improved engine airflow.">Add to Cart</a>
             </div>
         </div>
@@ -65,7 +63,7 @@
             <div class="card-content">
                 <h3>Spark Plugs</h3>
                 <p>High-quality iridium spark plugs for better ignition and fuel efficiency.</p>
-                <div class="price">₱200</div>
+                <div class="price">PHP 200</div>
                 <a href="#" class="btn" data-add-cart data-id="spark-plugs" data-name="Spark Plugs" data-price="200" data-category="Product" data-description="High-quality iridium spark plugs.">Add to Cart</a>
             </div>
         </div>
@@ -75,7 +73,7 @@
             <div class="card-content">
                 <h3>Chain Set</h3>
                 <p>Heavy-duty drive chain and sprocket set. Durable and long-lasting.</p>
-                <div class="price">₱850</div>
+                <div class="price">PHP 850</div>
                 <a href="#" class="btn" data-add-cart data-id="chain-set" data-name="Chain Set" data-price="850" data-category="Product" data-description="Heavy-duty drive chain and sprocket set.">Add to Cart</a>
             </div>
         </div>
@@ -85,45 +83,15 @@
             <div class="card-content">
                 <h3>Motorcycle Helmet</h3>
                 <p>Full-face safety helmet with ventilation system. Multiple sizes available.</p>
-                <div class="price">₱1,200</div>
+                <div class="price">PHP 1,200</div>
                 <a href="#" class="btn" data-add-cart data-id="motorcycle-helmet" data-name="Motorcycle Helmet" data-price="1200" data-category="Product" data-description="Full-face safety helmet with ventilation system.">Add to Cart</a>
             </div>
         </div>
-
-    </div>
-</div>
-
-<hr class="divider">
-
-<div class="section">
-    <h2 class="section-title">Services And Maintenance</h2>
-    <div class="cards">
-
-        <div class="card">
-            <img src="change.jpg" alt="Oil Change" class="card-img">
-            <div class="card-content">
-                <h3>Oil Change</h3>
-                <p>Full oil and filter replacement to keep your engine running smooth and clean.</p>
-                <div class="price">₱350</div>
-                <a href="#" class="btn" data-add-cart data-id="oil-change" data-name="Oil Change" data-price="350" data-category="Service" data-description="Full oil and filter replacement.">Add to Cart</a>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="brakecheck.jpg" alt="Brake Check" class="card-img">
-            <div class="card-content">
-                <h3>Brake Check</h3>
-                <p>Complete brake inspection, pad replacement, and fluid top-up for safe riding.</p>
-                <div class="price">₱250</div>
-                <a href="#" class="btn" data-add-cart data-id="brake-check" data-name="Brake Check" data-price="250" data-category="Service" data-description="Complete brake inspection and pad replacement.">Add to Cart</a>
-            </div>
-        </div>
-
     </div>
 </div>
 
 <footer>
-    <p>&copy; 2025 Jzone Motoshop. All rights reserved.</p>
+    <p>&copy; 2026 Jzone Motoshop. All rights reserved.</p>
 </footer>
 
 <script src="app.js"></script>

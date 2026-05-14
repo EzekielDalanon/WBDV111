@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jzone Motoshop - User Cart</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@700;900&display=swap" rel="stylesheet">
+</head>
+<body data-protected-user-page>
+
+<nav>
+    <a href="user-account.html" class="logo">Jzone Motoshop <span class="user-badge">User</span></a>
+    <ul class="nav-links">
+        <li><a href="user-account.html">Account</a></li>
+        <li><a href="user-products.html">Products</a></li>
+        <li><a href="user-services.html">Services</a></li>
+        <li><a href="user-cart.html" class="active">Cart</a></li>
+        <li><a href="index.html" data-logout>Logout</a></li>
+    </ul>
+</nav>
+
+<div class="admin-banner">
+    <h1>Cart</h1>
+    <p>Select the items you want to checkout.</p>
+</div>
+
+<div class="section">
+    <div class="order-grid">
+        <div class="order-products">
+            <h2 class="section-title" style="text-align:left;">Cart <span class="badge" data-cart-count>0 items</span></h2>
+            <div data-cart-list></div>
+        </div>
+
+        <div class="order-summary">
+            <h3>Cart Summary</h3>
+            <div data-cart-summary></div>
+            <br>
+            <a href="order.html" class="btn" data-checkout-button style="width: 100%; text-align:center;">Checkout Selected</a>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2026 Jzone Motoshop. All rights reserved.</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

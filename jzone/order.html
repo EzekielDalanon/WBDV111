@@ -7,60 +7,37 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@700;900&display=swap" rel="stylesheet">
 </head>
-<body>
+<body data-protected-user-page>
 
 <nav>
-    <a href="index.html" class="logo">Jzone motoshop</a>
+    <a href="user-account.html" class="logo">Jzone Motoshop <span class="user-badge">User</span></a>
     <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="products.html">Product/Service</a></li>
-        <li><a href="login.html">Login/Sign Up</a></li>
+        <li><a href="user-account.html">Account</a></li>
+        <li><a href="user-products.html">Products</a></li>
+        <li><a href="user-services.html">Services</a></li>
+        <li><a href="user-cart.html">Cart</a></li>
         <li><a href="order.html" class="active">Order</a></li>
+        <li><a href="index.html" data-logout>Logout</a></li>
     </ul>
 </nav>
 
 <div class="about-banner">
     <h1>Place Your Order</h1>
-    <p>Review your items and complete your purchase</p>
+    <p>Review your selected items and complete your purchase</p>
 </div>
 
 <div class="section">
     <div class="order-grid">
         <div class="order-products">
-            <h2 class="section-title" style="text-align:left;">Your Cart <span class="badge">3 items</span></h2>
-
-            <div class="order-item">
-                <div class="order-item-info">
-                    <h4>Engine Oil (1L)</h4>
-                    <p>Qty: 1 &nbsp; | &nbsp; High-performance synthetic</p>
-                </div>
-                <div class="order-item-price">₱450</div>
-            </div>
-
-            <div class="order-item">
-                <div class="order-item-info">
-                    <h4>Brake Pads</h4>
-                    <p>Qty: 1 &nbsp; | &nbsp; Front & rear set</p>
-                </div>
-                <div class="order-item-price">₱380</div>
-            </div>
-
-            <div class="order-item">
-                <div class="order-item-info">
-                    <h4>Engine Tune-Up (Service)</h4>
-                    <p>Qty: 1 &nbsp; | &nbsp; Full engine tune-up</p>
-                </div>
-                <div class="order-item-price">₱700</div>
-            </div>
+            <h2 class="section-title" style="text-align:left;">Selected Items <span class="badge" data-order-count>0 items</span></h2>
+            <div data-order-list></div>
 
             <hr class="divider">
 
             <h3 style="margin-bottom: 16px; color: #0d1b2a;">Delivery Details</h3>
 
             <div class="contact-form">
-                <form action="index.html">
+                <form data-order-form>
                     <input type="text" placeholder="Full Name" required>
                     <input type="text" placeholder="Phone Number" required>
                     <input type="text" placeholder="Delivery Address" required>
@@ -73,22 +50,7 @@
 
         <div class="order-summary">
             <h3>Order Summary</h3>
-            <div style="display:flex; justify-content:space-between; margin-bottom:10px; font-size:14px;">
-                <span>Engine Oil</span><span>₱450</span>
-            </div>
-            <div style="display:flex; justify-content:space-between; margin-bottom:10px; font-size:14px;">
-                <span>Brake Pads</span><span>₱380</span>
-            </div>
-            <div style="display:flex; justify-content:space-between; margin-bottom:10px; font-size:14px;">
-                <span>Engine Tune-Up</span><span>₱700</span>
-            </div>
-            <div style="display:flex; justify-content:space-between; margin-bottom:10px; font-size:14px; color:#888;">
-                <span>Delivery Fee</span><span>₱80</span>
-            </div>
-            <div class="total">
-                <span>Total</span>
-                <span>₱1,610</span>
-            </div>
+            <div data-order-summary></div>
             <br>
             <p style="font-size:12px; color:#888;">First-time customers get 10% off! Mention this when you call to confirm your order.</p>
         </div>
@@ -99,5 +61,6 @@
     <p>&copy; 2025 Jzone Motoshop. All rights reserved. | Premium Moto Parts & Professional Service Since 2023</p>
 </footer>
 
+<script src="app.js"></script>
 </body>
 </html>
